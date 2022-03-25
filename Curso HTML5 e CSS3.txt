@@ -1,0 +1,243 @@
+HTML5 & CSS3
+
+Criar pasta -> Abrir com VScode -> Criar novo arquivo com nome index.html -> Digitar "!" para criar um código base -> Mudar linguagem para pt-br
+
+<title> : O título do seu site
+<h1> : A principal mensagem, onde se coloca o título do que vai ser digitado no site
+<hr> : Cria uma linha de separação
+<p> : Cria um novo parágrafo no seu site
+<br> : Faz uma quebra de linha onde você quiser
+<img> : Adiciona imagens ao seu site
+<link favicon> : Adiciona um icon para o seu site
+
+//HIERARQUIA DE TÍTULOS//
+
+h1 > h2 > h3 > h4 > h5 > h6
+Semântica em HTML : Focar no significado e não na forma!!!
+
+//FORMATAÇÃO DE TEXTOS//
+
+Negrito/Destaque: tag <b> (não semântica), tag <strong> (semântica)
+Itálico/Ênfase: tag <i> (não semântica), tag <em> (semântica)
+
+Envelopar algo com tags: cntrl+shift+p -> wrap with abreviattion -> tag que for usada + enter
+
+Texto marcado: tag <mark> que pode ser mudada de cor fazendo uma tag <style> e mudando o background color
+
+Texto grande: tag <big> (obsoleta)
+Texto pequeno: tag <small>
+
+Texto deletado: tag <del> para indicar que ele deve ser lido, mas não considerado
+
+Texto inserido: tag <ins> para dar uma ênfase e indicar que ele foi adicionado depois
+
+Texto sobrescrito: tag <sup> para situações como número em potência
+
+Texto subscrito: tag <sub> para situações como H2O
+
+Texto mais limpo: tag <code> para facilitar a leitura
+
+shift + tab = puxar o texto para o canto
+
+Deixar o texto com todas as quebrar: tag <pre>
+
+Colocar aspas: tag <q>
+
+Citações: tag <blockquote cite="link">
+
+Abreviações: tag <abbr title="nome">
+
+Texto invertido: tag <bdo dir="rtl"> ou <bdo dir="ltr">
+
+//LISTAS//
+
+Obs: Todos os itens da lista devem estar com uma tah <li>
+
+Listas ordenadas: Tag <ol> com os types(1, A, a, I, i)
+
+Listas não ordenadas: Tag <ul> com os types(disc, circle, square)
+
+Misturar listas: Criando <ol> ou <ul> logo abaixo dos <li> 
+Ex: <ol>
+        <li>NES</li>
+        <ul type="square">
+            <li>Mario Bros</li>
+            <ul type="circle">
+                <li>Mario Bros 3</li>
+                <li>Mario: Lost Levels</li>
+            </ul>
+            
+ Lista de definições: tag <dl> com a tag <dt> para o termo e <dd> para a definição           
+
+//LINKS//
+
+Links externos: tag <a href="link"> envelopado onde você quiser que esteja o link 
+ex:  <p>Você pode acessar o meu <a href="https://github.com/luanvictorsm">perfil no GitHub</a></p>
+
+obs: Se você quiser que o site abra em outra aba você deve adicionar o target="_blank" e o rel="external"
+ex:<a href="https://github.com/luanvictorsm" target="_blank" rel="external">
+
+Links internos: Criar mais uma página dentro do vscode e para acessa-la é só fazer o mesmo que o link externo so que com o nome da página e o rel e target diferentes
+ex:<p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next" target="_self">segunda página</a></p>
+
+Links para download: <ul> --> <li><a href="conteúdo" download="conteúdo" type="application/tipo de arquivo">
+
+//IMAGENS DINÂMICAS//
+
+tag <picture> --> tag <img> --> tags <source> acima da img para seguir a ordem
+ex: <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+//ÁUDIOS//
+
+tag <audio> --> tag <source>
+ex:    <audio preload="metadata" autoplay controls loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+    
+//VÍDEOS// 
+
+tag <video> --> tag <source> (para vídeos hospedado no seu próprio servidor)
+ex: <video width="560" poster="imagens/capa.jpeg" controls autoplay loop>
+        <source src="midia/meu-video.mp4.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/m4v">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <p>Seu navegador não tem contabilidade com reprodução de vídeos.</p>
+    </video>
+    
+Para vídeos exportados devemos pegar o código dele 
+ex no youtube: vídeo --> compartilhar --> incorporar --> copiar
+
+//CSS//
+
+Estilos Inline: Trabalhar com a tag style dentro de cada tag do HTMl , uma por uma 
+ex: <body style="background-color: deepskyblue; font-family: Arial, Helvetica, sans-serif; font-size: 20pxa;">
+
+Estilos Locais/Internos: Dentro da tag <head> criar uma tag <style> e la adicionar cada uma das tags do html para mexer no estilo agrupadamente 
+ex: <style>
+      body {
+          background-color: lightskyblue;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 20px;
+      }  
+      h1 {
+          background-color: lightblue;
+          color: mediumblue;
+      }
+      h2 {
+          color: brown;
+      }
+      p { 
+          text-align: justify;
+      }
+    </style>
+    
+    Estilos externos: Criar um <link> de css acima da tag <title>, criar a página style.css e la colocar todo o estilo do site
+    ex: <link rel="stylesheet" href="style.css">
+    
+    obs: 1- Evitar usar estilos inline 
+         2- Usar o estilo interno so em css pequenos 
+         3- Dar preferência para estilo externo principalmente se o site tiver mais de 1 página
+            
+/////////////////////////////MÓDULO 2////////////////////////////////////
+
+//Psicologia das cores//
+
+Cores em CSS: Existe 5 formas
+1 - Representação pelo próprio nome (background-color: blue;)
+2 - Representação por códigos hexadecimais (background-color: #0000ff;)
+3 - Representação por RGB(background-color: rgb(0, 0, 255);)
+4 - Representação por HSL (background-color: hsl(240, 100%, 50%);)
+5 - Mudando pelo próprio Vscode (inclusive podendo alterar a transparência
+
+Harmonia das cores: 
+- Círculo cromático
+Cores primárias: Amarelo, Vermelho e Azul
+Cores secundárias: Laranja, Violeta e Verde
+Cores terciárias: Vermelho-arroxeado, Vermelho-alaranjado, Amarelo-esverdeado, Amarelo-alaranjado, Azul-arroxeado, Azul-esverdeado
+
+-Temperatura das cores
+Cores frias: Amarelo-esverdeado, verde, azul-esverdeado, azul, azul-arroxeado, violeta 
+Cores quentes: vermelho-arroxeado, vermelho, vermelho-alaranjado, laranja, amarelo-alaranjado, amarerelo
+
+Cores complementares: cores opostas mas que contrastam
+- Violeta e amarelo
+- Verde e vermelho
+- Azul e laranja
+etc
+
+Cores análogas: Cores que não contrastam mas são perceptíveis
+- Cores vizinhas das principais
+
+Pode ocorrer também misturas entre cores análogas e complementares
+
+Cores análogas relacionadas: 2 cores vizinhas + pular uma cor e escolher a próxima
+ex: amarelo, amarelo-alaranjado e vermelho-alaranjado
+
+Cores intercaladas: escolher cores intercaladamente
+ex: amarelo, laranja e vermelho
+
+Cores triádicas: pular 3 cores
+ex: amarelo, vermelho e azul
+
+Cores em quadrado: pular 2 cores
+ex: amarelo, vermelho-alaranjado, violeta, azul-esverdeado
+
+Cores tetrádicas: escolher 2 cores + suas complementares
+ex: verde e vermelho + laranja e azul
+
+Monocromia: Uma cor com saturação e luminosidade mudadas
+
+//TIPOGRAFIA//
+
+Categorias de fontes: serifadas, sans-serif, monoespaçada, handwriting, display
+
+//TAMANHO DE FONTE//
+
+Medidas absolutas: cm, mm, in, px, pt, pc
+Medidas Relativas: em, ex, rem, vw, vh, % 
+
+16px = 1em
+
+shorthand font: font-style -> font-weight -> font-size -> font-family
+
+ex: font: italic bolder 3em 'work Sans', sans-serif;            
+
+//FONTS COM GOOGLE FONTS//
+
+Ir ate o google fonts, escolher a fonte, copiar o import e colar logo no começo da tag style
+
+//FONTS EXTERNAS//
+
+@font-face
+
+Tipos de format()
+            - opentype
+            - truetype
+            - embedded-opentype
+            - truetype-aat (Apple Advanced Typography)
+            - svg
+            
+//ID E CLASS//
+
+em HTML é id = em CSS é # (só pode um elemento)
+em HTML é class = em CSS é . (pode vários elementos)            
+            
+            SELETORES PERSONALIZADOS
+            # = id
+            . = class
+            : = pseudo-class
+            :: = pseudo-element
+            > = children
+
+//MODELO DE CAIXAS//
+
+box-level: div, h1-h6, p, main, header, nav, article, aside, footer, form, video
+
+inline-level: span, a, code, small, strong, em, sup-sub, label, button, input, select           
