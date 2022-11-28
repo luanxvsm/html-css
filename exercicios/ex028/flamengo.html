@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamengo</title>
+    <style>
+
+body {
+  background-color: #dedede;
+  color : #aaa;
+  font-family : Verdana;
+  font-size: 80%;
+  text-align: center;
+}
+
+    .escudos{
+        float: left;
+        position:relative;
+        width : 200px;
+        height:200px;
+        margin:20px;
+        background: #222;
+        border-radius: 100%;
+        overflow: hidden;
+        box-shadow: 1px 2px 10px 1px #333;
+    }
+     
+    .escudo{
+  width : 150px;
+  height:150px;
+  position:relative;
+  left: 50%;
+  top: 50%;
+  margin : -75px 0 0 -75px;
+}
+
+    .flamengo{
+  position: absolute;
+  height: 98%;
+  width: 80%;
+  border-radius: 0px;
+  background-color: #222;
+
+  left: 9%;
+  top: 6%;
+
+  background-image: -webkit-linear-gradient(to bottom, transparent 52%, #555 52%);
+  background-image: -moz-linear-gradient(to bottom, transparent 52%, #555 52%);
+  background-image: -o-linear-gradient(to bottom, transparent 52%, #555 52%);
+  background-image: -ms-linear-gradient(to bottom, transparent 52%, #555 52%);
+  background-image: linear-gradient(to bottom, transparent 52%, #555 52%);
+
+  -webkit-background-size: 100% 27%;
+  -moz-background-size: 100% 27%;
+  background-size: 100% 27%;
+  border-radius : 0px 0px 100px 100px;
+  z-index: 10;
+}
+  .flamengo:after {
+    content:'';
+    display: block;
+    background-color: #222;
+    width: 50%;
+    height: 40%;
+    border-radius: 0px;
+    border-width: 0px 3px 3px 0px;
+  }
+  
+  .flamengo:before {
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+    border: none;
+    border-top: 19px solid #555;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    top: 96%;
+    left: 54%;
+    margin-left: -35px;
+  }
+
+    </style>
+</head>
+<body>
+    <div class="escudos">
+        <div class="escudo">
+            <div class="flamengo borda"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiaomi</title>
+    <style>
+        body {
+  background-color: #ccc;
+}
+
+#main {
+  background-color: #FF6900;
+  width: 415px;
+  height: 300px;
+  margin: 150px auto;
+  padding: 100px 50px;
+  border-radius: 150px;
+}
+
+#left,
+#right {
+  background-color: #fff;
+  margin-top: 40px;
+  height: 220px;
+}
+
+#left {
+  float: left;
+  width: 250px;
+  margin-left: 35px;
+  border-top-right-radius: 65px;
+  z-index: -99999;
+}
+
+#inner {
+  background-color: #FF6900;
+  width: 140px;
+  height: 170px;
+  margin-top: 50px;
+  border-top-right-radius: 40px;
+  margin-left: 55px;
+  z-index: 10;
+}
+
+#center {
+  background-color: #fff;
+  position: relative;
+  width: 50px;
+  height: 125px;
+  top: 45px;
+  left: 45px;
+  z-index: 999999;
+}
+
+#right {
+  float: right;
+  width: 50px;
+  margin-right: 35px;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="left">
+          <div id="inner">
+            <div id="center"></div>
+          </div>
+        </div>
+        <div id="right"></div>
+      </div>
+</body>
+</html>
