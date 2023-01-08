@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            width: 400px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            align-content: center;
+            row-gap: 10px;
+            column-gap: 30px;
+
+            /*Indiferente*/
+            background-color: bisque;
+            padding: 16px;
+            height: 500px;
+        }
+
+        .bloco1{
+            order: 0;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: flex-start;
+
+            /*Indiferente*/
+            background-color: rgb(250, 151, 151);
+            text-align: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 2px;
+        }
+
+        .bloco2{
+            order: 0;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: center;
+
+            /*Indiferente*/
+            background-color: rgb(165, 234, 252);
+            text-align: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 2px;
+        }
+
+        .bloco3{
+            order: 0;
+            flex-grow: 0;
+            flex-shrink: 2;
+            flex-basis: auto;
+            align-self: flex-end;
+
+            /*Indiferente*/
+            background-color: rgb(194, 255, 194);
+            text-align: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 2px;
+        }
+    </style>
+    <title>FlexBox</title>
+</head>
+<body>
+    <main class="container">
+        <div class="bloco1">1</div>
+        <div class="bloco2">2</div>
+        <div class="bloco3">3</div>
+        <!-- <div class="bloco1">4</div>
+        <div class="bloco2">5</div>
+        <div class="bloco3">6</div>
+        <div class="bloco1">7</div>
+        <div class="bloco2">8</div>
+        <div class="bloco3">9</div>
+        <div class="bloco1">10</div>
+        <div class="bloco2">11</div>
+        <div class="bloco3">12</div> -->
+    </main>
+</body>
+</html>
